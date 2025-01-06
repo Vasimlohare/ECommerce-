@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+        /* Header Styles */
+        header {
+            background-color: #282222;
+            padding: 20px;
+            color: white;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-container h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .header-container nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .header-container nav ul li {
+            margin-right: 20px;
+        }
+
+        .header-container nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .header-container nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        /* Login Container Styles */
+        .login-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h1 {
+            text-align: center;
+        }
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .login-container label {
+            margin-top: 10px;
+        }
+        .login-container input {
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        .login-container button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+        .login-container .extra-links {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .login-container .extra-links a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .login-container .extra-links a:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            color: red;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Additional Styling for header image (if used) */
+        .header-image.left {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        /* Footer Styles */
+footer {
+    background-color: #282222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    
+}
+
+.footer-container p {
+    font-size: 0.9rem;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <img src="image/wow new.png" alt="Left Logo" class="header-image left">
+            <h1>WoW Home Decor Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#product-section">Products</a></li>
+                    <li><a href="index.html#about-section">About Us</a></li>
+                    <li><a href="index.html#contact-section">Contact</a></li>
+                    <li><a id="clickable-register" href="registration.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login Form Section -->
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <div id="error-message" class="error-message"></div>
+            <input type="email" id="username" placeholder="Enter your email" required />
+            <input type="password" id="password" placeholder="Enter your password" required />
+            <button type="submit" id="login-button">Login</button>
+        </form>
+        
+        <!-- Extra Links -->
+        <div class="extra-links">
+            <!-- Forgot Password -->
+            <p><a href="forgotpassword.html">Forgot Password?</a></p>
+            
+            <!-- Sign Up Link -->
+            <p>Don't have an account? <a href="registration.html">Sign up</a></p>
+        </div>
+    </div>
+    <footer>
+        <!-- Add your footer content here -->
+        <div class="footer-container">
+            <p>&copy; 2025 WoW Home Decor Store</p>
+    </footer>
+
+    <script>
+              /* login form*/
+              document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get input values
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const errorMessage = document.getElementById('error-message');
+
+            // Clear previous error messages
+            errorMessage.style.display = 'none';
+
+            // Simulated login credentials
+            const validUsername = 'admin@example.com';
+            const validPassword = 'password123';
+
+            // Validate login
+            if (username === validUsername && password === validPassword) {
+                alert('Login successful!');
+                // Redirect to the main page
+                window.location.href = 'index1.html';
+            } else {
+                errorMessage.textContent = 'Invalid username or password. Please try again.';
+                errorMessage.style.display = 'block';
+            }
+        });
+            </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Wow Home Decor</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+        /* Header Styles */
+        header {
+            background-color: #282222;
+            padding: 20px;
+            color: white;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-container h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .header-container nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .header-container nav ul li {
+            margin-right: 20px;
+        }
+
+        .header-container nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .header-container nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        
+
+        /* Registration Form Styles */
+        .registration-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .registration-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1f2e1f;
+        }
+
+        .registration-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .registration-container label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .registration-container input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .registration-container button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .registration-container button:hover {
+            background-color: #66a0d0;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: none;
+        }
+        /* Additional Styling for header image (if used) */
+        .header-image.left {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        /* Footer Styles */
+footer {
+    background-color: #282222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-container p {
+    font-size: 0.9rem;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <img src="image/wow new.png" alt="Left Logo" class="header-image left">
+            <h1>WoW Home Decor Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#product-section">Products</a></li>
+                    <li><a href="index.html#about-section">About Us</a></li>
+                    <li><a href="index.html#contact-section">Contact</a></li>
+                    <li><a id="clickable-login" href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Registration Form Section -->
+    <div class="registration-container">
+        <h1>Create an Account</h1>
+        <form id="registration-form">
+            <div id="error-message" class="error-message"></div>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <footer>
+        <!-- Add your footer content here -->
+        <div class="footer-container">
+            <p>&copy; 2025 WoW Home Decor Store</p>
+    </footer>
+
+    <script>
+        // JavaScript for Registration Form Validation
+        document.getElementById('registration-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const fullName = document.getElementById('full-name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const confirmPassword = document.getElementById('confirm-password').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const errorMessage = document.getElementById('error-message');
+
+            errorMessage.style.display = 'none';
+            errorMessage.textContent = '';
+
+            // Basic Validation
+            if (!fullName || !email || !password || !confirmPassword || !phone || !address) {
+                errorMessage.textContent = 'All fields are required.';
+                errorMessage.style.display = 'block';
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                errorMessage.textContent = 'Passwords do not match.';
+                errorMessage.style.display = 'block';
+                return;
+            }
+
+            if (!/^\d{10}$/.test(phone)) {
+                errorMessage.textContent = 'Please enter a valid 10-digit phone number.';
+                errorMessage.style.display = 'block';
+                return;
+            }
+
+            alert('Registration successful!');
+            // Redirect or perform other actions
+            window.location.href = 'login.html'; // Example redirect
+        });
+        document.getElementById("product-link").addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent the default jump to the section
+      const contactSection = document.getElementById("product-section");
+      contactSection.scrollIntoView({ behavior: "smooth" }); // Scroll to the section smoothly
+  });
+    </script>
+
+</body>
+</html>

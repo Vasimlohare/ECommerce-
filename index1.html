@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>WoW Home Decor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Add your header content here -->
+        <div class="header-container">
+            <img src="image/wow new.png" alt="Left Logo" class="header-image left">
+            <h1>WoW Home Decor Store</h1>
+            <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a id="product-link" href="#product-section">Products</a></li>
+                <li><a id="about-link" href="#about-section">About Us</a></li>
+                <li><a id="contact-link" href="#contact-section">Contact</a></li>
+                <li><a id="logout-button" href="index.html">Logout</a></li>
+            </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="product-section">
+        <!-- Add your main content here -->
+         <p>Explore these Categories</p>
+         <hr>
+        <div class="product-container">
+            
+            <div class="product">
+                <a href="ArtificialFlower.html">
+                <img src="image/artificial flowers.webp" alt="Clock"></a>
+                <h2>Artificial flowers</h2>
+            </div>
+            <div class="product">
+                <a href="collectibles.html">
+                <img src="image/collectibles.webp" alt="Flora"></a>
+                <h2>Collectibles</h2>
+            </div>
+            <div class="product">
+                <a href="mirrors.html">
+                <img src="image/mirrors.webp" alt="Showpieces"></a>
+                <h2>Mirrors</h2>
+            </div>
+            <div class="product">
+                <a href="wallartpainting.html">
+                <img src="image/wall art painting.webp" alt="Clock"></a>
+                <h2>Wall Art Painting</h2>
+                
+            </div>
+            <div class="product">
+                <a href="photoframes.html">
+                <img src="image/photo frames.webp" alt="Flora"></a>
+                <h2>Photo frames</h2>
+                
+            </div>
+            <div class="product">
+                <a href="Gardning.html">
+                <img src="image/gardning.webp" alt="Showpieces"></a>
+                <h2>Gardning</h2>
+                
+            </div>
+            <div class="product">
+                <a href="Flowerpot.html">
+                <img src="image/flowerpot.jpg" alt="Clock"></a>
+                <h2>Flowerpot</h2>
+                
+            </div>
+            <div class="product">
+                <a href="Vases.html">
+                <img src="image/vases.webp" alt="Flora"></a>
+                <h2>Vases</h2>
+                
+            </div>
+            <div class="product">
+                <a href="Clocks.html">
+                <img src="image/clocks home page.webp" alt="Showpieces"></a>
+                <h2>Clocks</h2>
+                
+            </div>
+            <div class="product">
+                <a href="Tabledecor.html">
+                <img src="image/tabledecor.webp" alt="tabledecor"></a>
+                <h2>Tabledecor</h2>
+                
+            </div>
+        </section>
+    </main>
+
+    <section class="about-us">
+        <section id="about-section">
+        <div class="about-container">
+            <h2>About Us</h2>
+            <p>
+                Welcome to WoW Home Decor! We are passionate about bringing exceptional and unique pieces to your home that reflect your style and personality. 
+                Our curated collection of high-quality home decor is designed to elevate every space, making it not only more functional but also more beautiful.
+            </p>
+            <p>
+                From contemporary designs to timeless classics, we have something for everyone. Whether you're updating a single room or renovating your entire home, 
+                WoW Home Decor is your trusted partner in transforming your space into something truly special.
+            </p>
+            <p>
+                We believe that every home tells a story, and we're here to help you tell yours with the perfect decor pieces.
+            </p>
+        </div>
+        </section>
+    </section>
+    <section class="contact-us">
+        <section id="contact-section">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, feel free to reach out to us using the form below:</p>
+            <form action="#" method="post" class="contact-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your feedback here..." required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    </section>
+    <section class="social-media">
+        <div class="social-container">
+            <h2>Follow us Here</h2>
+            <ul>
+                <li><a href="https://www.instagram.com" target="_blank" class="icon instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com" target="_blank" class="icon facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.linkedin.com" target="_blank" class="icon linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.youtube.com" target="_blank" class="icon youtube"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://www.twitter.com" target="_blank" class="icon twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.pinterest.com" target="_blank" class="icon pinterest"><i class="fab fa-pinterest-p"></i></a></li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <!-- Add your footer content here -->
+        <div class="footer-container">
+            <p>&copy; 2025 WoW Home Decor Store</p>
+    </footer>
+    <button id="goToTop" onclick="scrollToTop()"></button>
+    <script >
+
+document.getElementById("about-link").addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default jump to the section
+    const aboutSection = document.getElementById("about-section");
+    aboutSection.scrollIntoView({ behavior: "smooth" }); // Scroll to the section smoothly
+});
+document.getElementById("contact-link").addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default jump to the section
+    const contactSection = document.getElementById("contact-section");
+    contactSection.scrollIntoView({ behavior: "smooth" }); // Scroll to the section smoothly
+});
+
+        // Ensure the script runs after the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+  // Add an event listener to the Logout button
+  const logoutButton = document.getElementById("logout-button");
+  
+  if (logoutButton) {
+      logoutButton.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default behavior of the link
+          
+          // Redirect to the index.html page
+          window.location.href = "index.html";
+      });
+  } else {
+      console.error("Logout button not found in the DOM.");
+  }
+});
+    </script>
+</body>
+</html>

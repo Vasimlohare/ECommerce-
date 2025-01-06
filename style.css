@@ -1,0 +1,390 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #282222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.header-container nav ul li a:hover {
+    color: #ffd700;
+}
+
+
+/* Main Styles */
+
+p {
+    font-size: 2rem;
+    justify-content: center;
+    display: flex;
+    margin: 10px auto;
+}
+.product-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(20% - 20px); /* Adjust width for 5 items per row */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.product button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.product button:hover {
+    background-color: #45a049;
+}
+
+body {
+    position: relative; 
+}
+
+/* nav styles*/
+nav ul li a.active {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #FFD700; /* Gold color */
+}
+
+.header-container {
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header-image {
+    position: absolute;
+    top: 0px;
+    width: 150px; /* Adjust the size of the images as needed */
+    height: auto;
+}
+
+.header-image.left {
+    left: 20px; /* Adjust spacing from the left */
+    right: 20px;
+    top: 20;
+    bottom: 20px;
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.color-button {
+    background-color: #4CAF50; /* Initial color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.color-button:hover {
+    background-color: #45a049; /* Hover effect */
+}
+
+/* About Us Section */
+.about-us {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #333;
+    line-height: 1.8;
+}
+
+.about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1f2e1f; /* Matches the header theme */
+}
+
+.about-us p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+#about-section {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+
+/* Contact Us Section */
+.contact-us {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+    line-height: 1.6;
+}
+
+.contact-us h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1f2e1f; /* Matches the theme */
+}
+
+.contact-us p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #1770cf;
+}
+
+#contact-section {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Social Media Section */
+.social-media {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.social-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-media h2 {
+    font-size: 2rem;
+    color: #1f2e1f; /* Matches theme */
+    margin-bottom: 20px;
+}
+
+.social-media ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.social-media ul li {
+    display: inline-block;
+}
+
+.social-media ul li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-media ul li a.instagram {
+    background-color: #E1306C; /* Instagram color */
+}
+
+.social-media ul li a.facebook {
+    background-color: #1877F2; /* Facebook color */
+}
+
+.social-media ul li a.linkedin {
+    background-color: #0077B5; /* LinkedIn color */
+}
+
+.social-media ul li a.youtube {
+    background-color: #FF0000; /* YouTube color */
+}
+
+.social-media ul li a.twitter {
+    background-color: #1DA1F2; /* Twitter color */
+}
+
+.social-media ul li a.pinterest {
+    background-color: #E60023; /* Pinterest color */
+}
+
+.social-media ul li a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #282222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-container p {
+    font-size: 0.9rem;
+}
+
+/* top styles */
+
+#goToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #goToTop:hover {
+    background-color: #0096c7;
+  }
+
+  #goToTop::before {
+    content: '\2191'; /* Upwards arrow Unicode */
+    font-size: 1.5rem;
+  }
+
+  
